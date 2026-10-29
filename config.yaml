@@ -1,0 +1,82 @@
+# ========================================================
+# Naukri Remote Job Agent Configuration
+# ========================================================
+
+# Search Criteria
+search:
+  # List of target job titles / skills to search (aligned with your resume & profile)
+  keywords:
+    - "Data Analyst"
+    - "Python Developer"
+    - "Data Engineer"
+    - "Business Intelligence Analyst"
+    - "Backend Developer"
+  
+  # Work mode: "Remote"
+  work_mode: "Remote"
+
+  # Strict Remote: Enforce 100% Remote / Work-From-Home only (rejects in-office, city-only, or hybrid)
+  strict_remote_only: true
+
+  # Experience in years (e.g. 1, 2, 3, etc.)
+  experience_years: 2
+
+  # Location filter (e.g. "India", "Remote", or leave blank for all remote)
+  location: "Remote"
+
+  # Maximum number of jobs to apply per run (keep <= 30 per day to protect account)
+  max_applications_per_run: 25
+
+  # Search results depth: How many pages of jobs to scan per keyword
+  max_pages_per_search: 3
+
+# Profile Daily Auto-Refresh & Resume Update
+profile_update:
+  # Path to your latest resume file (e.g., "./resume.pdf" or "./sagar.pdf")
+  # Leave empty if you only want to refresh the headline/activity status
+  resume_path: ""
+
+  # Resume headline (leave blank to auto-refresh your existing headline)
+  custom_headline: "Data Analyst | Python | SQL | Excel | Power BI | Pandas | NumPy | EDA | Matplotlib | Data Visualization"
+
+  # Daily schedule time (HH:MM in 24hr format)
+  daily_schedule_time: "09:30"
+
+# Application Filters
+filters:
+  # Skip jobs containing any of these keywords in the title
+  exclude_title_keywords:
+    - "Intern"
+    - "Internship"
+    - "Unpaid"
+    - "Lead"
+    - "Architect"
+    - "Manager"
+
+  # Exclude specific companies (e.g. spam recruiters or previous employers)
+  exclude_companies: []
+
+  # Only apply to jobs posted within the last N days (0 = any)
+  max_job_age_days: 14
+
+# Questionnaire Auto-Fill (Optional: used when Naukri chatbot asks quick questions)
+questionnaire:
+  # Notice Period in days (e.g., 0 for Immediate, 15, 30, 60, 90)
+  notice_period_days: 0
+  
+  # Current CTC in Lakhs per Annum (e.g., 6.5)
+  current_ctc_lpa: ""
+  
+  # Expected CTC in Lakhs per Annum (e.g., 10.0)
+  expected_ctc_lpa: ""
+
+# Safety & Execution Settings
+settings:
+  # Headless mode: false opens the browser so you can watch what it's doing
+  headless: false
+  
+  # Slow down actions (milliseconds) to mimic natural human browsing and avoid detection
+  action_delay_ms: 1500
+  
+  # Path to store the persistent browser profile / cookies
+  user_data_dir: "./user_data"

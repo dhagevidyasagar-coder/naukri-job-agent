@@ -1,0 +1,15 @@
+# Environment & Sensitive Credentials
+.env
+user_data/
+
+# Python Virtual Environment & Cache
+venv/
+__pycache__/
+*.pyc
+
+# Logs & Screenshots
+*.log
+demo_screenshots/
+
+# System Files
+.DS_Store
